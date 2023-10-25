@@ -59,4 +59,10 @@ const contoh9 = ["gabriel", "putra", "sihombing", "bandung"];
 let dataBaru9 = contoh9.splice(3, 0, "jacob")
 console.log(contoh9)
 
-// 10. 
+// 10. ForEach
+// Digunakan untuk melakukan perulangan atau Looping sebanyak data yang ada di Array
+const contoh10 = [1, 2, 3, 4, 5, 6, 7];
+contoh10.forEach((item) => {
+    console.log(item);
+});
+
