@@ -26,7 +26,7 @@ console.log(contoh4)
 
 
 // 5. Includes
-// Digunakan untuk mengecek apakah dalam sebuah Array terdapa element tertentu, dan '0' itu opsional mau mulai dari index keberapa akan di mulai pengecekan, tapi default nya adalah '0'
+// Digunakan untuk MENGECEK apakah dalam sebuah Array terdapa element tertentu, dan '0' itu opsional mau mulai dari index keberapa akan di mulai pengecekan, tapi default nya adalah '0'
 const contoh5 = ["gabriel", "putra", "advent", "yakop", "sihombing"];
 let dataBaru5 = contoh5.includes('yakop', 1)
 console.log(dataBaru5)
