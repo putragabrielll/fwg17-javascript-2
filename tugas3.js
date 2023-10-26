@@ -7,7 +7,7 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
                     temp.push(i)
                 }
             }
-            if (temp.length == 0) {
+            if (temp.length == 0) { //pengecekan 4
                 return "Nilai tidak ditemukan";
             }
             return temp
