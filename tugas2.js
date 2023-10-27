@@ -1,4 +1,5 @@
 const peserta = [
+  "Nurohman",
   "Abigail",
   "Alexandra",
   "Alison",
@@ -61,52 +62,36 @@ const convertToLowerCase = (nama) => {
   return temp;
 };
 
+// lower = n u r o h m a n
 const cekNama = (search, jumlah, callback) => {
   let hasil = []
-  // for untuk ambil index[0] dari variable peserta, berarti mengambil pertama "Abigail" karena index[0].
-  for (let i = 0; i < peserta.length; i++) {
-    let temp = convertToLowerCase(peserta[i]);
-    // temp[i] = convertToLowerCase(peserta[i]);
-    //console.log(temp)
-    
-    // setelah "Abigail" didapatkan maka "Abigail" sendiri akan di cek length nya.
-    // peserta[0] = Abigail
-    for (let j = 0; j < temp.length; j++){
-      // setelah didapatkan length nya maka menyamakan apakah "Abigail" dengan index[0] == dengan search dengan index[0].
-      if (temp[j] == search[0]) {
-        for (let k = 0; k < search.length; k++) {}
+  for (let i = 0; i < peserta.length; i++){
+    let lower = convertToLowerCase(peserta[i])
+    console.log(lower)
+
+    for (let j = 0; j < lower.length; j++){
+      let temp = ''
+      // untuk mencari berdasarkan banyak index dari parameter search
+      for (let k = 0; k < search.length; k++) {
+        temp+=lower[j+k]
       }
+      if (temp == search){
+        console.log(hasil.length)
+        // hasil.push(peserta[i])
+        hasil[hasil.length] = peserta[i]
+      }
+
     }
   }
-  
-  // for (let j = 0; j < temp.length; j++){
-  //   let temp2 = temp[j]
-  //   // temp2 = abigail
-  //   for (let k = 0; k < temp2.length; k++){
-  //   let temp3 = ''
-  //     for (let l = 0; l < search.length + 1; l++){
-  //       if (temp2[k] == search[l]){
-  //       }
-  //     }
-  //   }
-  // }
-  console.log(hasil)
-};
-cekNama('an')
+  return callback (hasil, jumlah)
+}
 
+const limitasi = (hasil, jumlah) => {
+  let temp2 = []
+  for (let l = 0; l < jumlah; l++){
+    temp2[temp2.length] = hasil[l]
+  }
+  return temp2
+}
 
-
-
-
-
-
-
-// function sarchName(search, jumlah, callback) {
-//   let data = name.filter((b) => b.toLowerCase().includes(search));
-//   return callback(data, jumlah);
-// }
-// function Mencari(data, jumlah) {
-//   data = data.slice(0, jumlah);
-//   return data;
-// }
-// console.log(sarchName("an", 3, Mencari));
+console.log(cekNama('an', 3, limitasi))
