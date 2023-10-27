@@ -64,6 +64,7 @@ const convertToLowerCase = (nama) => {
 
 // lower = n u r o h m a n
 const cekNama = (search, jumlah, callback) => {
+  let cekInput = convertToLowerCase(search)
   let hasil = []
   for (let i = 0; i < peserta.length; i++){
     let lower = convertToLowerCase(peserta[i])
@@ -72,13 +73,13 @@ const cekNama = (search, jumlah, callback) => {
     for (let j = 0; j < lower.length; j++){
       let temp = ''
       // untuk mencari berdasarkan banyak index dari parameter search
-      for (let k = 0; k < search.length; k++) {
-        temp+=lower[j+k]
+      for (let k = 0; k < cekInput.length; k++) {
+        temp += lower[j + k];
       }
-      if (temp == search){
-        console.log(hasil.length)
+      if (temp == cekInput) {
+        console.log(hasil.length);
         // hasil.push(peserta[i])
-        hasil[hasil.length] = peserta[i]
+        hasil[hasil.length] = peserta[i];
       }
 
     }
