@@ -5,7 +5,8 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
             for (let  i = nilaiAwal + 1; i < nilaiAkhir; i++) {
                 if (dataArray.includes(i)) { //pengecekan 3
                     // temp.push(i)
-                    temp[temp.length] = i;
+                    // temp[temp.length] = i;
+                    temp = [...temp, i]
                 }
             }
             if (temp.length == 0) { //pengecekan 4
