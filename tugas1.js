@@ -55,9 +55,9 @@ const contoh6 = [
         name: "sihombing"
     }
 ];
-let f = 3
-let dataBaru6 = contoh6.map(x => x.id).indexOf(f)
-console.log(contoh6[1].name)
+let f = "3"
+let dataBaru6 = contoh6.map(x => x.id).indexOf(Number(f))
+console.log(contoh6[dataBaru6].name)
 console.log(contoh6[dataBaru6])
 
 // 7. Concat
