@@ -34,7 +34,7 @@ console.log(dataBaru5)
 // 6. IndexOf
 // Untuk mencari letak dari sebuah element pada Array
 const contoh6 = ["gabriel", "putra", "advent", "yakop", "sihombing"];
-let dataBaru6 = contoh6.indexOf('yakop', 0)
+let dataBaru6 = contoh6.indexOf('yakop')
 console.log(dataBaru6)
 
 // 7. Concat
