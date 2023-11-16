@@ -33,9 +33,31 @@ console.log(dataBaru5)
 4
 // 6. IndexOf
 // Untuk mencari letak dari sebuah element pada Array
-const contoh6 = ["gabriel", "putra", "advent", "yakop", "sihombing"];
-let dataBaru6 = contoh6.indexOf('yakop')
-console.log(dataBaru6)
+const contoh6 = [
+    {
+        id: 1,
+        name: "gabriel"
+    }, 
+    {
+        id: 2,
+        name: "putra"
+    }, 
+    {
+        id: 3,
+        name: "advent"
+    }, 
+    {
+        id: 4,
+        name: "yakop"
+    }, 
+    {
+        id:5, 
+        name: "sihombing"
+    }
+];
+let f = 5
+let dataBaru6 = contoh6.map(x => x.id).indexOf(f)
+console.log(contoh6[dataBaru6])
 
 // 7. Concat
 // Digunakan untuk menggabungkan 2 atau lebih Array menjadi 1
