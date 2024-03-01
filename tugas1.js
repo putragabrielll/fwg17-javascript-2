@@ -55,7 +55,10 @@ const contoh6 = [
         name: "sihombing"
     }
 ];
-let f = "3"
+let dada = contoh5.indexOf("sihombing");
+console.log(dada)
+
+let f = "5"
 let dataBaru6 = contoh6.map(x => x.id).indexOf(Number(f))
 console.log(contoh6[dataBaru6].name)
 console.log(contoh6[dataBaru6])
@@ -80,6 +83,7 @@ console.log(dataBaru8);
 // Digunakan untuk menambah, menghapus dan mereplace sebuah element dari sebuah Array
 const contoh9 = ["gabriel", "putra", "sihombing", "bandung"];
 let dataBaru9 = contoh9.splice(3, 0, "jacob")
+console.log(dataBaru9)
 console.log(contoh9)
 
 // 10. ForEach
